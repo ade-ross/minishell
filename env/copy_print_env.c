@@ -49,7 +49,7 @@ void	print_env(char **env)
 	while (env[i])
 	{
 		if (ft_strchr(env[i], '='))
-			printf("%s\n", env[i]);
+			ft_putendl_fd(env[i], 1);
 		i++;
 	}
 }
