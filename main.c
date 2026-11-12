@@ -6,7 +6,7 @@
 /*   By: ade-ross <ade-ross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:34:07 by mshahein          #+#    #+#             */
-/*   Updated: 2025/05/28 19:49:14 by ade-ross         ###   ########.fr       */
+/*   Updated: 2026/11/12 20:27:53 by ade-ross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ int	main_h(char ***env,	char *s, int *exit_code, t_token **token_list)
 		add_history(s);
 	g_exit_status = 0;
 	token_list = parsing(s, env, exit_code);
+	free(s);
 	if (token_list && token_list[0] && (token_list[0])->token)
 	{
 		if (token_list[1] == NULL)

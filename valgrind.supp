@@ -1,12 +1,14 @@
 {
-    RL readline leaks
+    RL readline still reachable
     Memcheck:Leak
+    match-leak-kinds: reachable
     ...
     fun:readline
 }
 {
-    RL add_history leaks
+    RL add_history still reachable
     Memcheck:Leak
+    match-leak-kinds: reachable
     ...
     fun:add_history
 }

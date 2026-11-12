@@ -6,7 +6,7 @@
 /*   By: ade-ross <ade-ross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 22:21:57 by ade-ross          #+#    #+#             */
-/*   Updated: 2025/05/28 21:17:07 by ade-ross         ###   ########.fr       */
+/*   Updated: 2026/11/12 20:28:12 by ade-ross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,7 @@ t_token	**create_arr_of_lists(char *s, t_token **tokens)
 	if (!arr_of_lists)
 	{
 		ft_lstclear_tok(tokens);
-		free(s);
-		s = NULL;
+		(void)s;
 		return (NULL);
 	}
 	while (i < len && tokens && *tokens)
